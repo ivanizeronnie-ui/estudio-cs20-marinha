@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Material — Escaneamento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="tela-principal">
+    <header class="topo">
+      <h1>📷 Controle de Material do Estúdio</h1>
+      <nav class="menu">
+        <a href="index.html" class="ativo">Escanear</a>
+        <a href="status.html">O que está fora</a>
+        <a href="etiquetas.html">Etiquetas</a>
+      </nav>
+    </header>
+
+    <div id="aviso" class="aviso" style="display:none;"></div>
+
+    <section class="bloco">
+      <label for="pin">PIN de autorização</label>
+      <input type="password" id="pin" inputmode="numeric" maxlength="6" placeholder="Digite o PIN" />
+      <p class="ajuda">Digite uma vez; fica valendo enquanto esta página estiver aberta.</p>
+    </section>
+
+    <section class="bloco">
+      <h2>Aponte a câmera para o QR code do material</h2>
+      <div id="leitor"></div>
+      <details class="ajuda">
+        <summary>Câmera não funciona? Digite o código manualmente</summary>
+        <div class="linha-manual">
+          <input type="text" id="codigo-manual" placeholder="Ex: EST-05" />
+          <button class="botao" id="btn-codigo-manual">Buscar</button>
+        </div>
+      </details>
+    </section>
+
+    <div id="card-item-lido"></div>
+
+    <section class="bloco">
+      <h2>Itens escaneados para saída (<span id="contador-carrinho">0</span>)</h2>
+      <ul id="lista-carrinho" class="lista-carrinho"></ul>
+
+      <label for="fotografo">Fotógrafo responsável</label>
+      <select id="fotografo">
+        <option value="">Selecione...</option>
+      </select>
+
+      <button class="botao botao-principal" id="btn-emitir-os" disabled>
+        Emitir Ordem de Serviço
+      </button>
+    </section>
+  </div>
+
+  <!-- Tela de impressão da Ordem de Serviço (fica escondida até ser emitida) -->
+  <div id="tela-os" style="display:none;">
+    <div class="os-imprimivel">
+      <h1>ORDEM DE SERVIÇO — SAÍDA DE MATERIAL</h1>
+      <p><strong>Nº OS:</strong> <span id="os-numero"></span></p>
+      <p><strong>Fotógrafo:</strong> <span id="os-fotografo"></span></p>
+      <p><strong>Data/hora da saída:</strong> <span id="os-data"></span></p>
+      <table class="os-tabela">
+        <thead>
+          <tr><th>#</th><th>Código</th><th>Material</th></tr>
+        </thead>
+        <tbody id="os-itens"></tbody>
+      </table>
+      <p class="os-assinaturas">
+        Assinatura do fotógrafo: _______________________________ &nbsp;&nbsp;&nbsp;
+        Assinatura do paiol: _______________________________
+      </p>
+    </div>
+    <button class="botao no-print" onclick="window.print()">Imprimir novamente</button>
+    <button class="botao no-print" id="btn-voltar-scanner">Voltar para o escaneamento</button>
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script src="dados-iniciais.js"></script>
+  <script src="app.js"></script>
+  <script src="scanner.js"></script>
+</body>
+</html>

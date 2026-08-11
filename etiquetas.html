@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Material — Etiquetas para imprimir</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo no-print">
+    <h1>🏷️ Etiquetas dos materiais</h1>
+    <nav class="menu">
+      <a href="index.html">Escanear</a>
+      <a href="status.html">O que está fora</a>
+      <a href="etiquetas.html" class="ativo">Etiquetas</a>
+    </nav>
+  </header>
+
+  <div id="aviso" class="aviso no-print" style="display:none;"></div>
+
+  <section class="bloco no-print">
+    <p class="ajuda">
+      Clique em <strong>Imprimir</strong>, cole cada etiqueta no material correspondente.
+      Se adicionar um item novo na planilha depois, é só voltar nesta página — as
+      etiquetas novas aparecem automaticamente.
+    </p>
+    <button class="botao" onclick="window.print()">🖨️ Imprimir todas as etiquetas</button>
+  </section>
+
+  <div id="grade-etiquetas" class="grade-etiquetas"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="dados-iniciais.js"></script>
+  <script src="app.js"></script>
+  <script src="etiquetas.js"></script>
+</body>
+</html>

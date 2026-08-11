@@ -1,0 +1,159 @@
+/* ==================================================================
+ * Controle de Material do Estúdio — estilos gerais
+ * Pensado para uso principal em celular/tablet (botões grandes).
+ * ================================================================== */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1b2733;
+  margin: 0;
+  padding: 0 0 40px;
+}
+
+.topo {
+  background: #1f4e78;
+  color: white;
+  padding: 16px 18px 10px;
+}
+.topo h1 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+.menu { display: flex; gap: 10px; flex-wrap: wrap; }
+.menu a {
+  color: white;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.menu a.ativo { background: white; color: #1f4e78; font-weight: bold; }
+
+.bloco {
+  background: white;
+  margin: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.bloco h2 { margin-top: 0; font-size: 1.05rem; color: #1f4e78; }
+
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+input[type="password"], input[type="text"], select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.05rem;
+  border: 1px solid #c7d0da;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+.ajuda { color: #667; font-size: 0.85rem; margin: 4px 0 0; }
+
+.aviso {
+  margin: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.aviso-ok { background: #dcf5e0; color: #1f7a3d; }
+.aviso-erro { background: #fbdede; color: #8a1f1f; }
+.aviso-info { background: #e3edf9; color: #1f4e78; }
+
+/* botões grandes, fáceis de tocar */
+.botao {
+  display: inline-block;
+  background: #1f4e78;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 6px 4px 6px 0;
+}
+.botao:disabled { background: #aab6c2; cursor: not-allowed; }
+.botao-principal { width: 100%; font-size: 1.15rem; padding: 16px; }
+.botao-devolver { background: #b5651d; }
+.botao-remover {
+  background: none; border: none; color: #8a1f1f; text-decoration: underline;
+  font-size: 0.9rem; cursor: pointer; margin-left: 8px;
+}
+
+#leitor { width: 100%; max-width: 420px; margin: 0 auto; }
+
+.card {
+  margin: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff8ea;
+  border: 1px solid #e9d8a6;
+}
+.card-devolucao { background: #fdeee0; border-color: #e9b98a; }
+
+.lista-carrinho { list-style: none; padding: 0; margin: 0 0 12px; }
+.lista-carrinho li {
+  padding: 10px 12px;
+  background: #f0f4f9;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.linha-manual { display: flex; gap: 8px; margin-top: 8px; }
+.linha-manual input { flex: 1; margin-bottom: 0; }
+
+.tabela-status, .os-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.tabela-status th, .tabela-status td,
+.os-tabela th, .os-tabela td {
+  border: 1px solid #dde3ea;
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 0.92rem;
+}
+.tabela-status th, .os-tabela th { background: #eef3f8; }
+.codigo-pequeno { color: #778; font-size: 0.8rem; }
+
+/* ---- Ordem de Serviço imprimível ---- */
+.os-imprimivel {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 24px;
+  background: white;
+  border: 1px solid #ddd;
+}
+.os-imprimivel h1 { font-size: 1.2rem; text-align: center; }
+.os-assinaturas { margin-top: 40px; font-size: 0.85rem; }
+#tela-os { text-align: center; }
+#tela-os .botao { margin-top: 10px; }
+
+/* ---- Etiquetas ---- */
+.grade-etiquetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 14px;
+}
+.etiqueta {
+  border: 1px dashed #99a5b3;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.72rem;
+  break-inside: avoid;
+}
+.etiqueta-qr { display: flex; justify-content: center; margin-bottom: 4px; }
+
+@media print {
+  .no-print, .topo, .menu, #aviso, .ajuda, .botao { display: none !important; }
+  body { background: white; }
+  .bloco { box-shadow: none; margin: 0; }
+  #tela-os .os-imprimivel { display: block !important; }
+  .grade-etiquetas { grid-template-columns: repeat(4, 1fr); }
+}

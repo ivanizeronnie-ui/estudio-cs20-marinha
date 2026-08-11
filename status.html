@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Material — O que está fora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <h1>📋 O que está fora do paiol</h1>
+    <nav class="menu">
+      <a href="index.html">Escanear</a>
+      <a href="status.html" class="ativo">O que está fora</a>
+      <a href="etiquetas.html">Etiquetas</a>
+    </nav>
+  </header>
+
+  <div id="aviso" class="aviso" style="display:none;"></div>
+
+  <section class="bloco">
+    <label for="pin">PIN de autorização (necessário só para devolver por aqui)</label>
+    <input type="password" id="pin" inputmode="numeric" maxlength="6" placeholder="Digite o PIN" />
+  </section>
+
+  <section class="bloco">
+    <button class="botao" id="btn-atualizar">🔄 Atualizar lista</button>
+    <table class="tabela-status">
+      <thead>
+        <tr><th>Material</th><th>Fotógrafo</th><th>Saída em</th><th>Nº OS</th><th></th></tr>
+      </thead>
+      <tbody id="corpo-tabela">
+        <tr><td colspan="5">Carregando...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="dados-iniciais.js"></script>
+  <script src="app.js"></script>
+  <script src="status.js"></script>
+</body>
+</html>
