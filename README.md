@@ -65,38 +65,26 @@ células de uma planilha já existente):
 
 ## Etapa 3 — Colocar o site no ar (GitHub Pages)
 
-Não precisa saber programar nem usar linha de comando — dá tudo pelo navegador.
+✅ **Já fiz essa parte inteira para você.** Instalei o GitHub CLI, você autorizou o
+login, e a partir daí criei o repositório e publiquei o site sozinho. Está no ar:
 
-1. Crie uma conta gratuita em [github.com](https://github.com) (se ainda não tiver).
-2. Clique em **New repository** (repositório novo). Dê um nome, por exemplo
-   `controle-material-estudio`. Deixe como **Public**. Não marque nenhuma opção de
-   "README"/"licença" — pode criar vazio. Clique em **Create repository**.
-3. Na página do repositório recém-criado, clique no link **"uploading an existing
-   file"** (ou `Add file → Upload files`).
-4. **Antes de subir os arquivos**, abra o arquivo `app.js` (desta pasta) num editor
-   de texto e troque a linha:
-   ```
-   const APPS_SCRIPT_URL = "COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT";
-   ```
-   colando a URL que você copiou na Etapa 2, entre as aspas. Salve o arquivo.
-5. Arraste **todos os arquivos desta pasta** (`index.html`, `status.html`,
-   `etiquetas.html`, `style.css`, `app.js`, `scanner.js`, `status.js`,
-   `etiquetas.js`, `dados-iniciais.js`) para a área de upload do GitHub. **Não
-   precisa subir** `apps-script.gs` nem os arquivos `.csv` nem este `README.md`
-   (eles já cumpriram o papel deles nas Etapas 1 e 2) — mas não tem problema
-   nenhum se subir junto.
-6. Clique em **Commit changes** para confirmar o upload.
-7. Vá em **Settings → Pages** (menu à esquerda). Em "Build and deployment", escolha
-   **Deploy from a branch**, branch **main**, pasta **/(root)**, e clique em **Save**.
-8. Espere 1–2 minutos. Volte em **Settings → Pages** e você vai ver o link do site,
-   algo como `https://SEU-USUARIO.github.io/controle-material-estudio/`. Esse é o
-   endereço que você vai abrir no celular/tablet do paiol.
+👉 **https://ivanizeronnie-ui.github.io/controle-material-estudio/**
+
+(código-fonte: [github.com/ivanizeronnie-ui/controle-material-estudio](https://github.com/ivanizeronnie-ui/controle-material-estudio))
+
+**Quando você tiver a URL do Apps Script (fim da Etapa 2), não precisa editar nada
+sozinho** — é só me mandar essa URL aqui no chat que eu mesmo edito o `app.js` e
+publico a atualização no site (já tenho acesso de escrita configurado no repositório).
+Se preferir editar você mesmo: abra o arquivo `app.js` no site do GitHub (link acima),
+clique no ícone de lápis ✏️, troque a linha `COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT` pela
+URL, e clique em **Commit changes**.
 
 ---
 
 ## Etapa 4 — Imprimir as etiquetas
 
-1. No celular/computador, abra `https://SEU-USUARIO.github.io/.../etiquetas.html`.
+1. Abra **https://ivanizeronnie-ui.github.io/controle-material-estudio/etiquetas.html**
+   no celular/computador.
 2. Clique em **"Imprimir todas as etiquetas"**.
 3. Recorte e cole cada etiqueta (QR code + código + nome) no material
    correspondente.
@@ -105,7 +93,8 @@ Não precisa saber programar nem usar linha de comando — dá tudo pelo navegad
 
 ## Etapa 5 — Testar
 
-1. Abra a página inicial (`index.html`) no celular que vai ficar no paiol.
+1. Abra a página inicial (https://ivanizeronnie-ui.github.io/controle-material-estudio/)
+   no celular que vai ficar no paiol.
 2. Digite o PIN.
 3. Aponte a câmera para uma etiqueta de teste — o item deve aparecer na lista de
    "Itens escaneados para saída".
@@ -126,9 +115,9 @@ Se tudo isso funcionar, o sistema está pronto para uso real. 🎉
   planilha (próximo código sequencial, ex. `EST-35`), depois abra `etiquetas.html`
   e imprima — a etiqueta nova aparece sozinha, sem precisar mexer em nenhum
   arquivo.
-- **Trocar/adicionar fotógrafos da lista**: edite o array `FOTOGRAFOS_INICIAIS` no
-  arquivo `dados-iniciais.js` e suba o arquivo atualizado no GitHub (`Add file →
-  Upload files`, sobrescreve o antigo).
+- **Trocar/adicionar fotógrafos da lista**: me peça aqui no chat, ou edite você
+  mesmo o array `FOTOGRAFOS_INICIAIS` direto no arquivo `dados-iniciais.js` pelo
+  site do GitHub (ícone de lápis ✏️ → editar → Commit changes).
 - **Trocar o PIN**: edite `PIN_CORRETO` no `apps-script.gs` (dentro do Apps
   Script, não neste arquivo local) e implante uma nova versão (veja aviso na
   Etapa 2).
