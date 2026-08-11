@@ -12,24 +12,17 @@ no dia a dia.
 
 ## Etapa 1 — Criar a Planilha Google (o "banco de dados")
 
-✅ **Já adiantei essa parte para você.** Criei a planilha direto no seu Google Drive
-(conta `ivanize.ronnie@gmail.com`), já com os 34 materiais cadastrados:
+✅ **100% pronta, nada para você fazer aqui.** Criei a planilha direto no seu Google
+Drive (conta `ivanize.ronnie@gmail.com`), já com as duas abas com o nome certo
+(`Itens` e `Movimentacoes`) e os 34 materiais cadastrados:
 
-👉 **[Abrir a planilha "Controle de Material — Estúdio"](https://docs.google.com/spreadsheets/d/1MqB_hv2klc8HUR-TSnKk6JWnmvaf_O94aFF_U39BdaA/edit)**
+👉 **[Abrir a planilha "Controle de Material — Estúdio (FINAL)"](https://docs.google.com/spreadsheets/d/1Y6uurdbxGJUcqF2usVDq3K8CW1qOM3EFsIOFmhsgfz0/edit)**
 
-Só faltam 2 ajustes rápidos que eu não consigo fazer por aqui (a conexão que tenho
-com o Google Drive só cria/lê arquivos inteiros, não renomeia abas nem edita
-células de uma planilha já existente):
-
-1. Clique com o botão direito na aba (embaixo, hoje deve estar como "Sheet1" ou
-   parecido) e renomeie para exatamente **`Itens`**.
-2. Crie uma segunda aba (botão "+" embaixo) chamada exatamente **`Movimentacoes`**
-   (sem acento, sem espaço). Cole nela o conteúdo de **`planilha-modelo-Movimentacoes.csv`**
-   — só tem o cabeçalho mesmo, ela vai sendo preenchida sozinha conforme o sistema
-   é usado.
-
-> ⚠️ Os nomes das abas precisam ser exatamente `Itens` e `Movimentacoes` (o script
-> procura por esses nomes).
+> 🗑️ No processo eu criei 2 versões de rascunho antes de acertar essa (o Google
+> Drive só deixa criar arquivo novo, não editar aba de um já existente — tive que
+> testar até achar o formato certo). Pode apagar direto no Drive as duas com nome
+> **"Controle de Material — Estúdio"** e **"(estrutura)"** — só a que termina em
+> **"(FINAL)"** importa.
 
 ---
 
