@@ -61,9 +61,9 @@ Drive (conta `ivanize.ronnie@gmail.com`), já com as duas abas com o nome certo
 ✅ **Já fiz essa parte inteira para você.** Instalei o GitHub CLI, você autorizou o
 login, e a partir daí criei o repositório e publiquei o site sozinho. Está no ar:
 
-👉 **https://ivanizeronnie-ui.github.io/controle-material-estudio/**
+👉 **https://ivanizeronnie-ui.github.io/estudio-cs20-marinha/**
 
-(código-fonte: [github.com/ivanizeronnie-ui/controle-material-estudio](https://github.com/ivanizeronnie-ui/controle-material-estudio))
+(código-fonte: [github.com/ivanizeronnie-ui/estudio-cs20-marinha](https://github.com/ivanizeronnie-ui/estudio-cs20-marinha))
 
 **Quando você tiver a URL do Apps Script (fim da Etapa 2), não precisa editar nada
 sozinho** — é só me mandar essa URL aqui no chat que eu mesmo edito o `app.js` e
@@ -76,7 +76,7 @@ URL, e clique em **Commit changes**.
 
 ## Etapa 4 — Imprimir as etiquetas
 
-1. Abra **https://ivanizeronnie-ui.github.io/controle-material-estudio/etiquetas.html**
+1. Abra **https://ivanizeronnie-ui.github.io/estudio-cs20-marinha/etiquetas.html**
    no celular/computador.
 2. Clique em **"Imprimir todas as etiquetas"**.
 3. Recorte e cole cada etiqueta (QR code + código + nome) no material
@@ -86,7 +86,7 @@ URL, e clique em **Commit changes**.
 
 ## Etapa 5 — Testar
 
-1. Abra a página inicial (https://ivanizeronnie-ui.github.io/controle-material-estudio/)
+1. Abra a página inicial (https://ivanizeronnie-ui.github.io/estudio-cs20-marinha/)
    no celular que vai ficar no paiol.
 2. Digite o PIN.
 3. Aponte a câmera para uma etiqueta de teste — o item deve aparecer na lista de
