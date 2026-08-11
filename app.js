@@ -7,7 +7,7 @@
  * README.md), cole aqui a URL que o Google te deu, entre as aspas.
  * Termina com "/exec".
  */
-const APPS_SCRIPT_URL = "COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzlz09wnPHSfRtUaw-WJN8mA_RV7uMVBULm71CFyTrwwHc7afvYmvUjG4T8X1CTLSmKbg/exec";
 
 // Nome da chave usada para guardar o PIN digitado nesta aba do navegador
 // (fica só na memória da página, não é salvo no aparelho).
