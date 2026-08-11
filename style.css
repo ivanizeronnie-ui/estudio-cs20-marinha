@@ -14,13 +14,26 @@ body {
 }
 
 .topo {
-  background: #1f4e78;
+  background: #0B1F3A;
   color: white;
   padding: 16px 18px 10px;
+  border-bottom: 3px solid #C9A227;
+}
+.topo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.logo-marinha {
+  height: 46px;
+  width: auto;
 }
 .topo h1 {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 .menu { display: flex; gap: 10px; flex-wrap: wrap; }
 .menu a {
@@ -31,7 +44,7 @@ body {
   border-radius: 8px;
   font-size: 0.95rem;
 }
-.menu a.ativo { background: white; color: #1f4e78; font-weight: bold; }
+.menu a.ativo { background: white; color: #0B1F3A; font-weight: bold; }
 
 .bloco {
   background: white;
@@ -40,7 +53,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
-.bloco h2 { margin-top: 0; font-size: 1.05rem; color: #1f4e78; }
+.bloco h2 { margin-top: 0; font-size: 1.05rem; color: #0B1F3A; }
 
 label { display: block; font-weight: 600; margin-bottom: 6px; }
 input[type="password"], input[type="text"], select {
@@ -61,12 +74,12 @@ input[type="password"], input[type="text"], select {
 }
 .aviso-ok { background: #dcf5e0; color: #1f7a3d; }
 .aviso-erro { background: #fbdede; color: #8a1f1f; }
-.aviso-info { background: #e3edf9; color: #1f4e78; }
+.aviso-info { background: #e3edf9; color: #0B1F3A; }
 
 /* botões grandes, fáceis de tocar */
 .botao {
   display: inline-block;
-  background: #1f4e78;
+  background: #0B1F3A;
   color: white;
   border: none;
   padding: 14px 18px;

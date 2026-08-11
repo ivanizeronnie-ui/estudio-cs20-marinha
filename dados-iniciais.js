@@ -54,7 +54,11 @@ const ITENS_INICIAIS = [
 // Edite aqui os nomes, ou (melhor) mantenha uma aba "Fotografos" na planilha
 // e ajuste app.js para carregar dali se preferir não editar código depois.
 const FOTOGRAFOS_INICIAIS = [
-  "Fotógrafo 1",
-  "Fotógrafo 2",
-  "Fotógrafo 3",
+  "1SG Ronnie",
+  "1SG Paulo Cesar",
+  "1SG Helton",
+  "SO Ibrahim",
+  "1SG Ibrahim",
+  "2SG Mucio",
+  "3SG Raul",
 ];
