@@ -67,7 +67,11 @@ function processarCodigoLido(codigo) {
   ultimoScan = { codigo, quando: agora };
   vibrarSeSuportado();
 
-  const item = itensCache.find((i) => i.id_qr === codigo);
+  // String(...) nos dois lados: a planilha pode guardar id_qr como número
+  // (ex.: NUMPATs da Marinha, tipo 167397044) quando o valor "parece" numérico,
+  // enquanto o código lido da câmera é sempre texto — sem essa conversão a
+  // comparação "===" falha e o item nunca é reconhecido.
+  const item = itensCache.find((i) => String(i.id_qr) === codigo);
   if (!item) {
     avisar(`QR code "${codigo}" não corresponde a nenhum item cadastrado.`, "erro");
     return;
