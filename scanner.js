@@ -67,13 +67,19 @@ function processarCodigoLido(codigo) {
   ultimoScan = { codigo, quando: agora };
   vibrarSeSuportado();
 
+  // Etiquetas antigas (impressas antes do site existir) têm QR code no formato
+  // "NUMPAT: 167397044\nDESCRIÇÃO COMPLETA..." em vez de só o código. Extrai o
+  // número desse formato se for o caso, senão usa o código lido como está.
+  const match = codigo.match(/NUMPAT:\s*(\d+)/);
+  const codigoBusca = match ? match[1] : codigo;
+
   // String(...) nos dois lados: a planilha pode guardar id_qr como número
   // (ex.: NUMPATs da Marinha, tipo 167397044) quando o valor "parece" numérico,
   // enquanto o código lido da câmera é sempre texto — sem essa conversão a
   // comparação "===" falha e o item nunca é reconhecido.
-  const item = itensCache.find((i) => String(i.id_qr) === codigo);
+  const item = itensCache.find((i) => String(i.id_qr) === codigoBusca);
   if (!item) {
-    avisar(`QR code "${codigo}" não corresponde a nenhum item cadastrado.`, "erro");
+    avisar(`QR code "${codigoBusca}" não corresponde a nenhum item cadastrado.`, "erro");
     return;
   }
 
